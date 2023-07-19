@@ -32,14 +32,15 @@ export default function ItemComponent({
 
   return (
     <div>
-      <input
+      {/* <input
         type="text"
         value={textState}
         onChange={(ev) => {
           let textVar = ev.target.value;
           setTextState(textVar);
         }}
-      />
+      /> */}
+      <span>{text}</span>
       <button
         onClick={() => {
           deleteItem(id);

@@ -26,6 +26,13 @@ function App() {
     getData();
   };
 
+  const sortByRecent = () => {
+    setDataList(dataList.slice().sort((a,b) => a.timestamp - b.timestamp));
+  }
+  const sortByOldest = () => {
+    setDataList(dataList.slice().sort((a,b) => b.timestamp - a.timestamp));
+  }
+  
   return (
     <div className="main-content">
       <input ref={inputRef} type="text" />
@@ -48,6 +55,8 @@ function App() {
       >
         Save
       </button>
+      <button onClick={sortByRecent}>Sort by Recent</button>
+      <button onClick={sortByOldest}>Sort by Oldest</button>
 
       <div>
         {dataList.map((el) => (
