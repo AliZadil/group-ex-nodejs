@@ -28,11 +28,12 @@ function App() {
 
   const sortByRecent = () => {
     setDataList(dataList.slice().sort((a,b) => a.timestamp - b.timestamp));
-  }
+  };
+
   const sortByOldest = () => {
     setDataList(dataList.slice().sort((a,b) => b.timestamp - a.timestamp));
-  }
-  
+  };
+
   return (
     <div className="main-content">
       <input ref={inputRef} type="text" />
